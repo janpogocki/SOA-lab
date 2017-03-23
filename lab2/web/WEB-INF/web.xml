@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
+           version="3.1">
+
+    <servlet>
+        <servlet-name>Zadanie1</servlet-name>
+        <servlet-class>localhost.Zadanie1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Zadanie1</servlet-name>
+        <url-pattern>/Zadanie1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Zadanie2</servlet-name>
+        <servlet-class>localhost.Zadanie2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Zadanie2</servlet-name>
+        <url-pattern>/Zadanie2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Zadanie3</servlet-name>
+        <servlet-class>localhost.Zadanie3</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Zadanie3</servlet-name>
+        <url-pattern>/Zadanie3</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CarChoiceServlet</servlet-name>
+        <servlet-class>localhost.CarChoiceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CarChoiceServlet</servlet-name>
+        <url-pattern>/CarChoiceServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Zadanie5</servlet-name>
+        <servlet-class>localhost.Zadanie5</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Zadanie5</servlet-name>
+        <url-pattern>/Zadanie5</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Zadanie5GuestsBook</servlet-name>
+        <servlet-class>localhost.Zadanie5GuestsBook</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Zadanie5GuestsBook</servlet-name>
+        <url-pattern>/Zadanie5GuestsBook</url-pattern>
+    </servlet-mapping>
+
+</web-app>
