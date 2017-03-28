@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 
 /**
@@ -19,6 +18,7 @@ import java.util.List;
 public class Servlet_wybierzpiwo extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String c = request.getParameter("kolor");
+        String wiek = request.getParameter("wiek");
 
         // porada piwna
         EkspertPiwny ekspertPiwny = new EkspertPiwny();

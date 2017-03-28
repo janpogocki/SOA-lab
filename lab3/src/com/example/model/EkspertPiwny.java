@@ -9,10 +9,23 @@ import java.util.List;
 public class EkspertPiwny {
     public List<String> getMarki(String kolor){
         List<String> marki = new ArrayList();
+        if (kolor.equals("jasny")) {
+            marki.add("Perła");
+            marki.add("Żywiec");
+        }
         if (kolor.equals("bursztynowy")) {
             marki.add("Lech");
             marki.add("Żywiec");
         }
+        if (kolor.equals("brazowy")) {
+            marki.add("Książęce");
+            marki.add("Fortuna");
+        }
+        if (kolor.equals("ciemny")) {
+            marki.add("Strong");
+            marki.add("Palone");
+        }
+
 
         return marki;
     }

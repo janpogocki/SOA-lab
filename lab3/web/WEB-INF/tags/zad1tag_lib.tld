@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>akapity</short-name>
+    <uri>http://example.com</uri>
+
+    <tag>
+        <name>naglowek</name>
+        <tag-class>com.example.Zadanie1.Naglowek</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>tresc_naglowka</name>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>wyrownanie_naglowka</name>
+            <required>false</required>
+        </attribute>
+        <attribute>
+            <name>kolor_tresci_akapitu</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+</taglib>

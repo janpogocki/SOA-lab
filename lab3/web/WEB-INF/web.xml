@@ -14,4 +14,32 @@
         <url-pattern>/WybierzPiwo.do</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>Zadanie1</servlet-name>
+        <servlet-class>com.example.Zadanie1.Servlet_Zadanie1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Zadanie1</servlet-name>
+        <url-pattern>/Zadanie1.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Zadanie5</servlet-name>
+        <servlet-class>com.example.Zadanie5.Servlet_Zadanie5</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Zadanie5</servlet-name>
+        <url-pattern>/Zadanie5.do</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>WybierzPiwoFilter</filter-name>
+        <filter-class>com.example.web.WyborPiwa.WybierzPiwoFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>WybierzPiwoFilter</filter-name>
+        <url-pattern>/WybierzPiwo.do</url-pattern>
+    </filter-mapping>
+
 </web-app>
