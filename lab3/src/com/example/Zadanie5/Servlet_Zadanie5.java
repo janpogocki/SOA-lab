@@ -23,8 +23,8 @@ public class Servlet_Zadanie5 extends HttpServlet {
         filmy.add(new Film("Ojciec chrzestny", "dramat", "1972", 120000000));
         filmy.add(new Film("Pluton", "wojenny", "1986", 50000000));
         filmy.add(new Film("Nagi instynkt", "thriller", "1992", 100000000));
-        filmy.add(new Film("Scarface", "dramat", "1983", 65000000));
-        filmy.add(new Film("Jak rozpętałem drugą wojnę światową", "wojenny", "1969", 50000000));
+        filmy.add(new Film("Jak zostać królem?", "biograficzny", "2010", 58000000));
+        filmy.add(new Film("Przełęcz ocalonych", "wojenny", "2016", 175000000));
         return filmy;
     }
 

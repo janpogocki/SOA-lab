@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.example.Zadanie2.MessagesFile" %><%--
   Created by IntelliJ IDEA.
   User: Jan
   Date: 28.03.2017
@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<form action="Zadanie5GuestsBook" method="post">
+<form action="Zadanie2b.jsp" method="post">
     <b>Please send your feedback:</b>
     <br>
     Your name: <input type="text" name="name"/>
@@ -24,6 +24,20 @@
 <br>
 <hr>
 <br>
+
+<%
+    MessagesFile wiadomosci = new MessagesFile();
+
+    wiadomosci.setSetEditableMessages();
+
+    if (request.getParameter("name") != null && request.getParameter("email") != null && request.getParameter("comment") != null){
+        wiadomosci.addMessage(request.getParameter("name"), request.getParameter("email"), request.getParameter("comment"));
+        wiadomosci.saveListToFile();
+    }
+
+    out.print(wiadomosci.printMessages());
+
+%>
 
 </body>
 </html>
