@@ -1,3 +1,11 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Jan
+  Date: 29.03.2017
+  Time: 20:11
+  To change this template use File | Settings | File Templates.
+--%>
+
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="com.example.Zadanie5.Film" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

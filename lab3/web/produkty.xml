@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product>
+        <id>1</id>
+        <name>Monitor LCD</name>
+        <price>450</price>
+    </product>
+    <product>
+        <id>2</id>
+        <name>Komputer stacjonarny</name>
+        <price>1999</price>
+    </product>
+    <product>
+        <id>3</id>
+        <name>Klawiatura</name>
+        <price>50</price>
+    </product>
+    <product>
+        <id>4</id>
+        <name>Mysz</name>
+        <price>30</price>
+    </product>
+    <product>
+        <id>5</id>
+        <name>Glosniki</name>
+        <price>89</price>
+    </product>
+    <product>
+        <id>6</id>
+        <name>Kamera internetowa HD z mikrofonem</name>
+        <price>119</price>
+    </product>
+</products>
