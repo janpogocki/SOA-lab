@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+
+    <h:form>
+
+        Imię (*): <h:inputText id="imie" value="#{zadanie5.imie}" required="true" /><br/>
+        E-mail (*): <h:inputText id="email" value="#{zadanie5.email}" required="true"><f:validateRegex pattern="[A-Za-z0-9._+-]{0,}@[A-Za-z0-9.-]{0,}\.[A-Za-z]{2,6}" /></h:inputText><br/>
+        Kod pocztowy (*): <h:inputText id="kod" value="#{zadanie5.kod}" required="true"><f:validateRegex pattern="[0-9]{2}-[0-9]{3}" /></h:inputText><br/>
+        Wiek (*) (10-100): <h:inputText id="wiek" value="#{zadanie5.wiek}" required="true"><f:validateLongRange minimum="10" maximum="100" /></h:inputText><br/>
+
+        <h:selectOneRadio value="#{zadanie5.plec}" id="plec" valueChangeListener="#{zadanie5.renderAdditionalQuestions}" binding="#{zadanie5.selectOneRadio}" onchange="submit()">
+            Płeć:
+            <f:selectItem itemValue="mężczyzna" itemLabel="Mężczyzna" />
+            <f:selectItem itemValue="kobieta" itemLabel="Kobieta" />
+        </h:selectOneRadio>
+
+        Wykształcenie: <h:inputText id="wyksztalcenie" value="#{zadanie5.wyksztalcenie}" /><br/>
+        Rozmiar (20-50): <h:inputText id="rozmiar" required="true" value="#{zadanie5.rozmiar}"><f:validateLongRange minimum="20" maximum="50" /></h:inputText><br/>
+
+        <hr/>
+
+        <h:selectOneMenu id="pytanie1" value="#{zadanie5.pytanie1}">
+            Ile jesteś w stanie przeznaczyć miesięcznie na zakup ubrania?
+            <f:selectItem itemValue="do 100 zł" itemLabel="do 100 zł" />
+            <f:selectItem itemValue="100-500 zł" itemLabel="100-500 zł" />
+            <f:selectItem itemValue="500-1000 zł" itemLabel="500-1000 zł" />
+            <f:selectItem itemValue="powyżej 1000 zł" itemLabel="powyżej 1000 zł" />
+        </h:selectOneMenu>
+
+        <br/>
+
+        <h:selectManyCheckbox id="pytanie2" value="#{zadanie5.pytanie2}">
+            Gdzie najczęściej dokonujesz zakupów ubrania?
+            <f:selectItem itemValue="Sklep firmowy" itemLabel="Sklep firmowy" />
+            <f:selectItem itemValue="Hipermarket" itemLabel="Hipermarket" />
+            <f:selectItem itemValue="Bazar" itemLabel="Bazar" />
+            <f:selectItem itemValue="Sklep z odzieżą używaną" itemLabel="Sklep z odzieżą używaną" />
+        </h:selectManyCheckbox>
+
+        <br/>
+
+        <h:selectOneMenu id="pytanie3" value="#{zadanie5.pytanie3}">
+            Jak często dokonujesz zakupu ubrania?
+            <f:selectItem itemValue="Codziennie" itemLabel="Codziennie" />
+            <f:selectItem itemValue="Raz w tygodniu" itemLabel="Raz w tygodniu" />
+            <f:selectItem itemValue="Raz w miesiącu" itemLabel="Raz w miesiącu" />
+            <f:selectItem itemValue="Kilka razy w roku" itemLabel="Kilka razy w roku" />
+        </h:selectOneMenu>
+
+        <br/>
+
+        <h:selectManyCheckbox id="pytanie4" value="#{zadanie5.pytanie4}">
+            W jakich kolorach preferujesz ubrania?
+            <f:selectItem itemValue="Kolorowo-jaskrawych" itemLabel="Kolorowo-jaskrawych" />
+            <f:selectItem itemValue="Stonowanych w szarościach" itemLabel="Stonowanych w szarościach" />
+            <f:selectItem itemValue="W czerni i bieli" itemLabel="W czerni i bieli" />
+            <f:selectItem itemValue="W samej czerni" itemLabel="W samej czerni" />
+        </h:selectManyCheckbox>
+
+        <hr/>
+
+        <h:panelGrid rendered="#{zadanie5.subviewW}">
+            <h:selectManyCheckbox id="pytanie5w" value="#{zadanie5.pytanie5}">
+                Jakiego rodzaju ubrania najchętniej kupujesz?
+                <f:selectItem itemValue="garsonki" itemLabel="garsonki" />
+                <f:selectItem itemValue="bluzki" itemLabel="bluzki" />
+                <f:selectItem itemValue="spódniczki" itemLabel="spódniczki" />
+                <f:selectItem itemValue="spodnie" itemLabel="spodnie" />
+            </h:selectManyCheckbox>
+
+            <h:selectOneMenu id="pytanie6w" value="#{zadanie5.pytanie6}">
+                Kiedy ostatnio robiłaś u nas zakupy?
+                <f:selectItem itemValue="Wczoraj" itemLabel="Wczoraj" />
+                <f:selectItem itemValue="W zeszłym tygodniu" itemLabel="W zeszłym tygodniu" />
+                <f:selectItem itemValue="W zeszłym miesiącu" itemLabel="W zeszłym miesiącu" />
+                <f:selectItem itemValue="Kilka miesięcy temu" itemLabel="Kilka miesięcy temu" />
+                <f:selectItem itemValue="Nie pamiętam" itemLabel="Nie pamiętam" />
+            </h:selectOneMenu>
+
+            <br/>
+
+            <h:selectOneMenu id="pytanie7w" value="#{zadanie5.pytanie7}">
+                Czy jesteś zadowolona z zakupu?
+                <f:selectItem itemValue="Tak" itemLabel="Tak" />
+                <f:selectItem itemValue="Raczej tak" itemLabel="Raczej tak" />
+                <f:selectItem itemValue="Raczej nie" itemLabel="Raczej nie" />
+                <f:selectItem itemValue="Nie" itemLabel="Nie" />
+                <f:selectItem itemValue="Nie wiem" itemLabel="Nie wiem" />
+            </h:selectOneMenu>
+
+            <br/>
+
+            <h:selectOneMenu id="pytanie8w" value="#{zadanie5.pytanie8}">
+                Czy jesteś zadowolona z naszych pracowników?
+                <f:selectItem itemValue="Tak" itemLabel="Tak" />
+                <f:selectItem itemValue="Raczej tak" itemLabel="Raczej tak" />
+                <f:selectItem itemValue="Raczej nie" itemLabel="Raczej nie" />
+                <f:selectItem itemValue="Nie" itemLabel="Nie" />
+                <f:selectItem itemValue="Nie wiem" itemLabel="Nie wiem" />
+            </h:selectOneMenu>
+
+            <br/>
+
+            Wpisz swoje uwagi: <br/>
+            <h:inputTextarea id="pytanie9w" value="#{zadanie5.pytanie9}" />
+
+            <br/><br/>
+
+        </h:panelGrid>
+
+        <h:panelGrid rendered="#{zadanie5.subviewM}">
+            <h:selectManyCheckbox id="pytanie5m" value="#{zadanie5.pytanie5}">
+                Jakiego rodzaju ubrania najchętniej kupujesz?
+                <f:selectItem itemValue="spodnie" itemLabel="spodnie" />
+                <f:selectItem itemValue="spodenki" itemLabel="spodenki" />
+                <f:selectItem itemValue="garnitury" itemLabel="garnitury" />
+                <f:selectItem itemValue="koszule" itemLabel="koszule" />
+                <f:selectItem itemValue="krawaty" itemLabel="krawaty" />
+            </h:selectManyCheckbox>
+
+            <h:selectOneMenu id="pytanie6m" value="#{zadanie5.pytanie6}">
+                Kiedy ostatnio robiłeś u nas zakupy?
+                <f:selectItem itemValue="Wczoraj" itemLabel="Wczoraj" />
+                <f:selectItem itemValue="W zeszłym tygodniu" itemLabel="W zeszłym tygodniu" />
+                <f:selectItem itemValue="W zeszłym miesiącu" itemLabel="W zeszłym miesiącu" />
+                <f:selectItem itemValue="Kilka miesięcy temu" itemLabel="Kilka miesięcy temu" />
+                <f:selectItem itemValue="Nie pamiętam" itemLabel="Nie pamiętam" />
+            </h:selectOneMenu>
+
+            <br/>
+
+            <h:selectOneMenu id="pytanie7m" value="#{zadanie5.pytanie7}">
+                Czy jesteś zadowolony z zakupu?
+                <f:selectItem itemValue="Tak" itemLabel="Tak" />
+                <f:selectItem itemValue="Raczej tak" itemLabel="Raczej tak" />
+                <f:selectItem itemValue="Raczej nie" itemLabel="Raczej nie" />
+                <f:selectItem itemValue="Nie" itemLabel="Nie" />
+                <f:selectItem itemValue="Nie wiem" itemLabel="Nie wiem" />
+            </h:selectOneMenu>
+
+            <br/>
+
+            <h:selectOneMenu id="pytanie8m" value="#{zadanie5.pytanie8}">
+                Czy jesteś zadowolony z naszych pracowników?
+                <f:selectItem itemValue="Tak" itemLabel="Tak" />
+                <f:selectItem itemValue="Raczej tak" itemLabel="Raczej tak" />
+                <f:selectItem itemValue="Raczej nie" itemLabel="Raczej nie" />
+                <f:selectItem itemValue="Nie" itemLabel="Nie" />
+                <f:selectItem itemValue="Nie wiem" itemLabel="Nie wiem" />
+            </h:selectOneMenu>
+
+            <br/>
+
+            Wpisz swoje uwagi: <br/>
+            <h:inputTextarea id="pytanie9m" value="#{zadanie5.pytanie9}" />
+
+            <br/><br/>
+
+
+        </h:panelGrid>
+
+        <h:commandButton value="Wyślij" action="#{zadanie5.sendData}" />
+    </h:form>
+
+
+
+</f:view>
+</html>

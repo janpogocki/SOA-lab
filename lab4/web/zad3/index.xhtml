@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h1>Gromadzenie danych osobowych</h1><br/>
+
+<f:view>
+
+<h:form>
+    Imię: <h:inputText value="#{zadanie3.imie}" required="false" /><br/>
+    Nazwisko (*): <h:inputText value="#{zadanie3.nazwisko}" required="true" /><br/>
+    Wiek (*): <h:inputText value="#{zadanie3.wiek}" required="true"><f:validateLongRange minimum="0" maximum="120" /></h:inputText><br/>
+
+    <h:selectOneRadio value="#{zadanie3.plec}">
+        Płeć:
+        <f:selectItem itemValue="mężczyzna" itemLabel="Mężczyzna" />
+        <f:selectItem itemValue="kobieta" itemLabel="Kobieta" />
+    </h:selectOneRadio>
+
+    <h:selectOneMenu value="#{zadanie3.wojewodztwo}" valueChangeListener="#{zadanie3.activeButton}" binding="#{zadanie3.selectOneMenu}" onchange="submit()">
+        Województwo:
+        <f:selectItem itemValue="0" itemLabel="--- wybierz ---" />
+        <f:selectItem itemValue="małopolskie" itemLabel="małopolskie" />
+        <f:selectItem itemValue="mazowieckie" itemLabel="mazowieckie" />
+        <f:selectItem itemValue="opolskie" itemLabel="opolskie" />
+    </h:selectOneMenu>
+
+    <br/>
+
+    <h:commandButton value="Wyślij" action="#{zadanie3.sendData}" disabled="#{!(zadanie3.disable)}" binding="#{zadanie3.buttonSubmit}" />
+</h:form>
+
+</f:view>
+
+</html>
