@@ -13,7 +13,7 @@ import java.util.Random;
 
 @SessionScoped
 @ManagedBean
-public class Zadanie5 implements Serializable {
+public class Zadanie5 {
     private String imie, email, kod, wiek, plec, wyksztalcenie, rozmiar, pytanie1, pytanie3, pytanie6, pytanie7, pytanie8, pytanie9;
     private List<String> pytanie2, pytanie4, pytanie5;
     private boolean subviewM, subviewW;
