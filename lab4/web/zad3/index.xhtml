@@ -15,7 +15,7 @@
     Nazwisko (*): <h:inputText value="#{zadanie3.nazwisko}" required="true" /><br/>
     Wiek (*): <h:inputText value="#{zadanie3.wiek}" required="true"><f:validateLongRange minimum="0" maximum="120" /></h:inputText><br/>
 
-    <h:selectOneRadio value="#{zadanie3.plec}">
+    <h:selectOneRadio value="#{zadanie3.plec}" required="true">
         Płeć:
         <f:selectItem itemValue="mężczyzna" itemLabel="Mężczyzna" />
         <f:selectItem itemValue="kobieta" itemLabel="Kobieta" />
