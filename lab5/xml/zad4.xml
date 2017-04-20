@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pracownicy>
+    <pracownik>
+        <okresZatrudnienia>P5Y2M10DT15H</okresZatrudnienia>
+        <email>pracownik@firma.pl</email>
+        <identyfikator>1</identyfikator>
+        <podwladny>2</podwladny>
+    </pracownik>
+    <pracownik>
+        <okresZatrudnienia>P5Y2M10DT15H</okresZatrudnienia>
+        <email>pracownik@firma.pl</email>
+        <identyfikator>2</identyfikator>
+    </pracownik>
+</pracownicy>

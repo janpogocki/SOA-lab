@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<books>
+<book>
+<author>Autor1</author>
+<author>Autor2</author>
+<author>Autor3</author>
+<title lang="polski">Tytuł polski</title>
+<title lang="angielski">English title</title>
+<isbn>123-456-789</isbn>
+</book>
+<book>
+<author>Autor4</author>
+<author>Autor5</author>
+<title lang="polski">Tytuł 2</title>
+<isbn>885-996-774</isbn>
+</book>
+</books>

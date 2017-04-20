@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="pracownicy" type="pracownicy" />
+
+    <xs:complexType name="pracownicy">
+        <xs:sequence>
+            <xs:element name="pracownik" type="pracownik" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="pracownik">
+        <xs:sequence>
+            <xs:element name="okresZatrudnienia" type="okresZatrudnienia" minOccurs="1" maxOccurs="1" />
+            <xs:element name="email" type="email" minOccurs="1" maxOccurs="1" />
+            <xs:element name="identyfikator" type="identyfikator" minOccurs="1" maxOccurs="1" />
+            <xs:element name="podwladny" type="identyfikator" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="okresZatrudnienia">
+        <xs:union>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="bezterminowo"/>
+                </xs:restriction>
+            </xs:simpleType>
+            <xs:simpleType>
+                <xs:restriction base="xs:duration"/>
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
+
+    <xs:simpleType name="email">
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[a-zA-Z0-9]*@[a-zA-Z0-9]*\.[a-zA-Z0-9]{0,3}" />
+            </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="identyfikator">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer" />
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:schema>
