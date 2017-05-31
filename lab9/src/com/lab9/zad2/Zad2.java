@@ -2,7 +2,6 @@ package com.lab9.zad2;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
-import javax.xml.ws.Endpoint;
 
 /**
  * Created by Jan on 31.05.2017.
@@ -49,11 +48,5 @@ public class Zad2 implements Zad2Interface {
             System.out.println(koszt);
             return koszt;
         }
-    }
-
-    public static void main(String[] argv) {
-        Object implementor = new Zad2();
-        String address = "http://localhost:9000/Zad2";
-        Endpoint.publish(address, implementor);
     }
 }

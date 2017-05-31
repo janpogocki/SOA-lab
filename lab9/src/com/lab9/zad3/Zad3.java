@@ -2,7 +2,6 @@ package com.lab9.zad3;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
-import javax.xml.ws.Endpoint;
 
 /**
  * Created by Jan on 31.05.2017.
@@ -57,11 +56,5 @@ public class Zad3 implements Zad3Interface {
                 duzeLitery + "\nMalych liter:\t" + maleLitery + "\nCyfry:\t" + iloscCyfr;
         System.out.println(returned);
         return returned;
-    }
-
-    public static void main(String[] args) {
-        Object implementor = new Zad3();
-        String address = "http://localhost:9000/Zad3";
-        Endpoint.publish(address, implementor);
     }
 }

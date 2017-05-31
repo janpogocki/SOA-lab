@@ -9,11 +9,11 @@ import java.net.URL;
  */
 public class Zad3Client {
     public static void main(String[] args) throws Exception {
-        URL url = new URL("http://localhost:9000/Zad3Interface?wsdl");
+        URL url = new URL("http://localhost:8080/lab9_war_exploded/Zad3?wsdl");
         QName qname = new QName("http://zad3.lab9.com/", "Zad3Service");
         Service service = Service.create(url, qname);
 
         Zad3Interface zad3Interface = service.getPort(new QName("http://zad3.lab9.com/", "Zad3Port"), Zad3Interface.class);
-        zad3Interface.getStringStats("test TEST 1234");
+        System.out.println(zad3Interface.getStringStats("test TEST 1234"));
     }
 }

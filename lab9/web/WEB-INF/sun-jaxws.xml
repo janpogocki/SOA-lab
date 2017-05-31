@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <endpoints xmlns='http://java.sun.com/xml/ns/jax-ws/ri/runtime' version='2.0'>
-    
+
+    <endpoint
+            name='Zad1'
+            implementation='com.lab9.zad1.Zad1'
+            url-pattern='/services/Zad1'/>
+
+    <endpoint
+            name='Zad2'
+            implementation='com.lab9.zad2.Zad2'
+            url-pattern='/services/Zad2'/>
+
+    <endpoint
+            name='Zad3'
+            implementation='com.lab9.zad3.Zad3'
+            url-pattern='/services/Zad3'/>
 </endpoints>

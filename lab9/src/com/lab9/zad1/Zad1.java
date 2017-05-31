@@ -5,7 +5,6 @@ import org.joda.time.Days;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
-import javax.xml.ws.Endpoint;
 
 /**
  * Created by Jan on 30.05.2017.
@@ -23,10 +22,5 @@ public class Zad1 implements Zad1Interface {
         String returned = "Do wakacji pozostało: " + daysInt + " dni";
         System.out.println(returned);
         return returned;
-    }
-    public static void main(String[] argv) {
-        Object implementor = new Zad1();
-        String address = "http://localhost:9000/Zad1";
-        Endpoint.publish(address, implementor);
     }
 }
