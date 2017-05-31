@@ -10,7 +10,7 @@ import javax.xml.ws.Endpoint;
 /**
  * Created by Jan on 30.05.2017.
  */
-@WebService()
+@WebService
 public class Zad1 implements Zad1Interface {
     @WebMethod
     public String getDaysToHolidays() {
