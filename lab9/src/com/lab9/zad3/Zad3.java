@@ -53,7 +53,7 @@ public class Zad3 implements Zad3Interface {
         int maleLitery = getLowercase(str);
         int iloscCyfr = getDigits(str);
 
-        String returned = "STATYSTYKI:\n\nZnaków:\t" + iloscZnakow + "\nBialych znakow:\t" + iloscBialychZnakow + "\nDuzych liter:\t" +
+        String returned = str + "\n\nZnaków:\t" + iloscZnakow + "\nBialych znakow:\t" + iloscBialychZnakow + "\nDuzych liter:\t" +
                 duzeLitery + "\nMalych liter:\t" + maleLitery + "\nCyfry:\t" + iloscCyfr;
         System.out.println(returned);
         return returned;
