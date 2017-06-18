@@ -4,6 +4,7 @@ import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.TextMessage;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
 
 /**
@@ -33,19 +34,20 @@ public class Storage {
             e.printStackTrace();
         }
 
-        //if (!contains(message))
-            messageList.add(message);
+        messageList.add(message);
     }
 
     public static String getMessages(String strefa){
         StringBuilder returned = new StringBuilder();
 
+        List<Message> listOfMessages = new ArrayList<>(new LinkedHashSet<>(Storage.messageList));
+
         try {
-            for (int i=0; i<messageList.size(); i++) {
-                Message m = messageList.get(i);
+            for (int i=0; i<listOfMessages.size(); i++) {
+                Message m = listOfMessages.get(i);
                 if (m.getStringProperty("strefa").equals(strefa)) {
                     returned.append(((TextMessage) m).getText() + " (" + m.getStringProperty("miejsce") + ")").append("\n");
-                    if (messageList.remove(m))
+                    if (listOfMessages.remove(m))
                         i--;
                 }
             }
