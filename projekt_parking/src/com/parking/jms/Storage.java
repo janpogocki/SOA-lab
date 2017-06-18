@@ -40,20 +40,27 @@ public class Storage {
     public static String getMessages(String strefa){
         StringBuilder returned = new StringBuilder();
 
-        List<Message> listOfMessages = new ArrayList<>(new LinkedHashSet<>(Storage.messageList));
+        List<Message> listOfMessages = new ArrayList<>(Storage.messageList);
+        List<String> listOfStrings = new ArrayList<>();
 
         try {
             for (int i=0; i<listOfMessages.size(); i++) {
                 Message m = listOfMessages.get(i);
                 if (m.getStringProperty("strefa").equals(strefa)) {
-                    returned.append(((TextMessage) m).getText() + " (" + m.getStringProperty("miejsce") + ")").append("\n");
-                    if (listOfMessages.remove(m))
-                        i--;
+                    listOfStrings.add(((TextMessage) m).getText() + " (" + m.getStringProperty("miejsce") + ")");
                 }
             }
         } catch (JMSException e) {
             e.printStackTrace();
         }
+
+        LinkedHashSet<String> lhs = new LinkedHashSet<String>();
+        lhs.addAll(listOfStrings);
+        listOfStrings.clear();
+        listOfStrings.addAll(lhs);
+
+        for (int i=0; i<listOfStrings.size(); i++)
+            returned.append(listOfStrings.get(i)).append("\n");
 
         return returned.toString();
     }
