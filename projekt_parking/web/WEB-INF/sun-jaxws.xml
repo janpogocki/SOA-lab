@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<endpoints xmlns='http://java.sun.com/xml/ns/jax-ws/ri/runtime' version='2.0'>
+
+    <endpoint
+            name='PlaceWS'
+            implementation='com.parking.system.PlaceWS'
+            url-pattern='/services/PlaceWS'/>
+    <endpoint
+            name='ApiPlaceWS'
+            implementation='com.parking.apisoap.ApiPlaceWS'
+            url-pattern='/services/ApiPlaceWS'/>
+</endpoints>
