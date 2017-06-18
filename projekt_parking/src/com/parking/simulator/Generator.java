@@ -22,7 +22,7 @@ public class Generator {
     }
 
     public String randomCars(){
-        String [] malopolskie = {"KCH", "KRA", "KLI", "KMY", "KNT", "KOS", "KSU", "KWA"};
+        String [] malopolskie = {"KRA", "KOS", "KSU", "KWA"};
 
         String returned = "";
 
@@ -31,14 +31,14 @@ public class Generator {
         returned += (char)(random.nextInt(26) + 'A');
         returned += (char)(random.nextInt(26) + 'A');*/
 
-        returned += malopolskie[random.nextInt(7)];
+        returned += malopolskie[random.nextInt(4)];
 
         returned += " ";
-        returned += random.nextInt(9);
-        returned += random.nextInt(9);
-        returned += random.nextInt(9);
-        returned += random.nextInt(9);
-        returned += random.nextInt(9);
+        returned += random.nextInt(10);
+        returned += random.nextInt(10);
+        returned += random.nextInt(10);
+        returned += random.nextInt(10);
+        returned += random.nextInt(10);
 
         if (Storage.listOfCars.contains(returned)) {
             Storage.listOfCars.add(returned);
