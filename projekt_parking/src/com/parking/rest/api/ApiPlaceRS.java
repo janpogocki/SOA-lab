@@ -10,8 +10,6 @@ import javax.ws.rs.Path;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Jan on 17.06.2017.

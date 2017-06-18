@@ -1,8 +1,5 @@
 package com.parking.rest;
 
-
-import com.parking.system.Storage;
-import com.parking.system.Ticket;
 import com.parking.system.TicketService;
 
 import javax.json.Json;
